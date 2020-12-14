@@ -4,21 +4,30 @@
   <head>
     <title>Angularjs Get Started</title>
     <script data-require="angular.js@*" data-semver="1.8.2" src="https://code.angularjs.org/1.8.2/angular.js"></script>
-<!--    <script data-require="angular.js@*" data-semver="1.2.25" src="https://code.angularjs.org/1.2.25/angular.js"></script>-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
 
   <body ng-controller="MainController">
-    <h1> {{message}} </h1>
-    <div>{{error}}</div>
-  <div>
-    <div>Name: {{ user.name }}</div>
-    <div>Location: {{ user.location }}</div>
+    <h1>{{message}}</h1>
+    
     <div>
-      <img ng-src="{{user.avatar_url}}" title="{{ user.name }}"/>
+      {{ error }}
     </div>
-  </div>
+    
+    <div>
+     <div>
+       Name: {{user.name}}
+     </div>
+     <div>
+       Location: {{user.location}}
+     </div>
+      <div>
+        <img ng-src="{{user.avatar_url}}" title="{{user.name}}" alt="">
+      </div>
+      
+    </div>
+    
   </body>
 
 </html>
