@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html  ng-app="githubViewer" lang="en">
-
-  <head>
+<html lang="en_US" ng-app="githubViewer">
+<head>
     <title>Angularjs Get Started</title>
     <script data-require="angular.js@*" data-semver="1.8.2" src="https://code.angularjs.org/1.8.2/angular.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link href="style.css" rel="stylesheet"/>
     <script src="script.js"></script>
-  </head>
+</head>
 
-  <body ng-controller="MainController">
-    <h1>{{message}}</h1>
 
-    <div>
-      {{ error }}
-    </div>
+<body ng-controller="MainController">
+<h1>{{message}}</h1>
 
-    <form name="searchUser" ng-submit="search(username)">
-        <label>
-            <input type="search" placeholder="Username to find" ng-model="username" />
-        </label>
-        <input type="submit" value="Search" />
-    </form>
+<div>{{ error }}</div>
 
-  <div ng-include="'userdetails.html'" ng_show="user"></div>
+<form name="searchUser" ng-submit="search(username)">
+    <label>
+        <input ng-model="username" placeholder="Username to find" required type="search"/>
+    </label>
+    <input type="submit" value="Search"/>
+</form>
 
-  </body>
+<div ng-include="'userdetails.html'" ng-show="user"></div>
+</body>
 
 </html>
