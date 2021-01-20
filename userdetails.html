@@ -1,19 +1,21 @@
-<div>
+<div id = "userDetails" >
     <h2>{{user.name}}</h2>
     <img ng-src="{{user.avatar_url}}" title="{{user.name}}" alt="">
-    Order:
-    <label>
-        <select ng-model="repoSortOrder">
-            <option value="+name">Name Ascending</option>
-            <option value="-name">Name Descending</option>
-            <option value="+stargazers_count">Stars Ascending</option>
-            <option value="-stargazers_count">Stars Descending</option>
-            <option value="+language">Language Ascending</option>
-            <option value="-language">Language Descending</option>
-        </select>
-    </label>
+    <div>
+        Order:
+        <label>
+            <select ng-model="repoSortOrder">
+                <option value="+name">Name Ascending</option>
+                <option value="-name">Name Descending</option>
+                <option value="+stargazers_count">Stars Ascending</option>
+                <option value="-stargazers_count">Stars Descending</option>
+                <option value="+language">Language Ascending</option>
+                <option value="-language">Language Descending</option>
+            </select>
+        </label>
+    </div>
 </div>
-
+<p></p>
 <table>
     <thead>
     <tr>
